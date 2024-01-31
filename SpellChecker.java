@@ -62,9 +62,9 @@ public class SpellChecker {
 		String str = "";
 		int minDis = levenshtein(word, dictionary[0]);
 		str = dictionary[0];
-		for ( int i = 0; i < dictionary.length; i++)
+		for ( int i = 1; i < dictionary.length; i++)
 		{
-			if( levenshtein(word, dictionary[i]) <= minDis)
+			if( levenshtein(word, dictionary[i]) < minDis)
 			{
 				str = dictionary[i];
 				minDis = levenshtein(word, dictionary[i]);
